@@ -1,0 +1,268 @@
+.container {
+  width: 80%;
+  height: 100%;
+  padding-right: 40px;
+  transition: background-color 0.4s ease, color 0.4s ease,
+    border-color 0.4s ease;
+}
+.titleSection {
+  display: flex;
+}
+.title {
+  font-weight: 700;
+  display: flex;
+  margin: 0;
+  width: 100%;
+  padding-bottom: 15px;
+}
+.subTitle {
+  font-weight: 700;
+  margin: 0;
+  font-size: small;
+}
+a {
+  cursor: none;
+}
+a:active {
+  cursor: none;
+}
+
+/*--------Back button-----------*/
+.backComponent {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.backBtn {
+  width: 50px;
+  height: 30px;
+  padding-left: 20px;
+}
+
+.bk2Proj {
+  opacity: 0;
+  width: 0;
+  margin: 0 0 0 5px;
+  transition: all 0.3s ease;
+}
+.backComponent:hover .bk2Proj {
+  opacity: 1;
+  width: 4em;
+  white-space: nowrap;
+  font-weight: 700;
+}
+
+/*----------main content------------*/
+.contentSection {
+  margin: 40px 0 40px 0;
+  position: relative;
+  z-index: 1;
+  pointer-events: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  border-bottom: solid 1px #ccc;
+  align-items: center;
+}
+.scBox {
+  grid-column: 1;
+  grid-row: 1;
+  max-width: 650px;
+  height: auto;
+  margin-right: 30px;
+}
+.projSc {
+  max-width: 600px;
+  height: auto;
+  object-fit: contain;
+}
+.about {
+  grid-column: 2;
+  grid-row: 1;
+  padding: 0 20px 0 20px;
+  line-height: 1.5;
+  font-size: smaller;
+  font-weight: 700;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  border-left: solid 1px #ccc;
+}
+.about p {
+  margin: 0;
+  margin-bottom: 20px;
+}
+strong {
+  font-weight: 700;
+}
+.link {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+}
+.linkArrow {
+  width: 18px;
+  height: 18px;
+}
+.link:hover {
+  color: gray;
+  transition: color 0.1s ease;
+}
+.tech {
+  grid-column: 1;
+  grid-row: 2;
+  margin: 40px 0;
+  width: 95%;
+}
+.tech p {
+  font-size: smaller;
+  font-weight: 700;
+  margin-bottom: 30px;
+  /* border-bottom: solid 1px lightgray; */
+}
+.techLinks {
+  max-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2px;
+}
+.techName {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 700;
+  font-size: smaller;
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+}
+
+.techName:hover {
+  color: gray;
+  transition: color 0.1s ease;
+}
+/*--------------------Navigation Section----------------*/
+.navSection {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+}
+.list {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.line {
+  border-top: 1px solid var(--border-color);
+}
+article {
+  width: 100%;
+  height: 50px;
+  border-bottom: 1px solid var(--border-color);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  align-items: center;
+  justify-content: space-between;
+}
+.evWrapper {
+  display: flex;
+  align-items: center;
+}
+.arrow {
+  opacity: 0;
+  width: 0;
+  transition: all 0.3s ease;
+}
+.date {
+  font-weight: 700;
+}
+article:hover .arrow {
+  opacity: 1;
+  width: 1.2em;
+  height: 1.2em;
+  padding-right: 10px;
+}
+.nxtPrv {
+  font-weight: 700;
+}
+
+/*------------Responsive Behaviour----------------*/
+@media (max-width: 768px) {
+  .project-layout {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+  }
+
+  .meta {
+    grid-column: 1;
+  }
+
+  .contentSection {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .about {
+    width: 100%; /* take full width */
+    padding: 0 10px; /* small horizontal padding */
+    border-left: none; /* remove desktop border */
+  }
+
+  .tech {
+    grid-column: auto;
+    grid-row: auto;
+    margin: 20px 0;
+  }
+
+  .projSc {
+    width: 100%;
+    max-width: 100%;
+  }
+  .backComponent {
+    display: none;
+  }
+  .navSection {
+    justify-content: center; /* center the container */
+    width: 100%;
+  }
+
+  .list {
+    width: 100%; /* stretch full width */
+    display: flex;
+    flex-direction: row; /* put next & prev side by side */
+    justify-content: space-between; /* space between them */
+  }
+
+  .list article {
+    width: 48%; /* almost half each */
+    display: flex;
+    justify-content: center;
+    border-bottom: none; /* remove desktop border */
+    height: auto;
+    padding: 10px 0;
+  }
+
+  .evWrapper {
+    justify-content: center;
+  }
+
+  .arrow {
+    opacity: 1;
+    width: 1.2em;
+    height: 1.2em;
+    padding-right: 5px;
+  }
+
+  .nxtPrv {
+    font-weight: 700;
+    text-align: center;
+  }
+}

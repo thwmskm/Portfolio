@@ -1,0 +1,183 @@
+.container {
+  width: 80%;
+  padding-right: 40px;
+  transition: background-color 0.4s ease, color 0.4s ease,
+    border-color 0.4s ease;
+}
+/*--------Close button-----------*/
+.closeComponent {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  position: fixed;
+  top: 80px;
+  right: 50px;
+  z-index: 9999;
+}
+
+.closeBtn {
+  width: 45px;
+  height: 30px;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.close {
+  margin-left: 5px;
+  opacity: 0;
+  width: 0;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.closeComponent:hover .close {
+  opacity: 1;
+  width: 4em;
+  white-space: nowrap;
+}
+
+/*------Main Content-----------*/
+.contentSection {
+  margin: 40px 0 100px 0;
+  position: relative;
+  z-index: 1;
+  pointer-events: auto;
+}
+.scBox {
+  max-width: 260px;
+  height: auto;
+  background-color: white;
+}
+.projSc {
+  width: 260px;
+  height: auto;
+  object-fit: contain;
+  border: solid 1px #f5f5f5;
+}
+strong {
+  font-weight: 700;
+}
+/*----------home screen---------*/
+.homeSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  grid-template-columns: 40% 60%;
+  align-items: center;
+  margin-bottom: 100px;
+}
+.aboutHome {
+  grid-column: 2;
+  grid-row: 1;
+  padding: 0 20px 0 20px;
+  line-height: 1.5;
+  font-size: smaller;
+  font-weight: 700;
+  width: 70%;
+  border-left: solid 1px lightgray;
+}
+.homeSc {
+  grid-column: 1;
+  grid-row: 1;
+}
+/*------------edit-----------*/
+.editSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  grid-template-columns: 55% 45%;
+  align-items: center;
+  margin-bottom: 100px;
+}
+.aboutEdit {
+  grid-column: 1;
+  grid-row: 1;
+  padding: 0 20px 0 20px;
+  line-height: 1.5;
+  font-size: smaller;
+  font-weight: 700;
+  width: 70%;
+  border-left: solid 1px lightgray;
+  margin-bottom: 100px;
+}
+.editSc {
+  grid-column: 2;
+  grid-row: 1;
+}
+/*---------add Section-----------*/
+.addSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  grid-template-columns: 40% 60%;
+  align-items: center;
+  margin-bottom: 100px;
+}
+.aboutAdd {
+  grid-column: 2;
+  grid-row: 1;
+  padding: 0 20px 0 20px;
+  line-height: 1.5;
+  font-size: smaller;
+  font-weight: 700;
+  width: 70%;
+  border-left: solid 1px lightgray;
+}
+.addSc {
+  grid-column: 1;
+  grid-row: 1;
+}
+/*------------VTT result page-----------*/
+.voiceSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  grid-template-columns: 55% 45%;
+  align-items: center;
+  margin-bottom: 100px;
+}
+.aboutVoice {
+  grid-column: 1;
+  grid-row: 1;
+  padding: 0 20px 0 20px;
+  line-height: 1.5;
+  font-size: smaller;
+  font-weight: 700;
+  width: 70%;
+  border-left: solid 1px lightgray;
+  margin-bottom: 100px;
+}
+.voiceSc {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+/* ---------RESPONSIVE --------*/
+
+@media (max-width: 768px) {
+  .homeSection,
+  .editSection,
+  .addSection,
+  .voiceSection {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .aboutHome,
+  .aboutEdit,
+  .aboutAdd,
+  .aboutVoice {
+    border-left: none;
+    width: 100%;
+    padding-left: 0;
+  }
+
+  .scBox {
+    max-width: 100%;
+  }
+
+  .closeComponent {
+    display: none;
+  }
+}

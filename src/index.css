@@ -1,0 +1,15 @@
+/*GLOBAL STYLING*/
+:root {
+  --main-font: "Red Hat Display", sans-serif;
+}
+* {
+  font-family: var(--main-font);
+  font-weight: 400;
+  user-select: none;
+}
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: none !important;
+}

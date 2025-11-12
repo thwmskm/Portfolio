@@ -1,0 +1,47 @@
+.defaultType {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: var(--text-color);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.4s ease, border 0.4s ease;
+}
+
+.linkType {
+  position: fixed;
+  background: transparent;
+  border: 2px solid var(--text-color);
+  border-radius: 50%;
+  pointer-events: none;
+  transition: background 0.4s ease;
+  z-index: 9999;
+}
+
+.enterType {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  background: var(--text-color);
+  border-radius: 50%;
+  pointer-events: none;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.4s ease, transform 0.1s ease;
+}
+.enterArrow {
+  color: var(--bg-color);
+  pointer-events: none;
+  width: 40px;
+  height: 40px;
+  stroke-width: 1;
+  position: absolute;
+  transition: transform 0.1s ease;
+}

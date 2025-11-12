@@ -1,0 +1,173 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1200px;
+  gap: 1rem;
+  transition: background-color 0.4s ease, color 0.4s ease,
+    border-color 0.4s ease;
+}
+
+.leftSect {
+  width: 48%;
+  min-width: 300px;
+  position: relative;
+  overflow: hidden;
+  max-width: 400px;
+}
+
+.wrapper {
+  position: relative;
+  flex: 0 0 auto;
+  overflow: hidden;
+}
+
+.img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: opacity 0.4s ease;
+}
+
+.caption {
+  position: absolute;
+  width: 100%;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-color);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+  font-weight: 700;
+}
+
+.wrapper:hover .caption {
+  opacity: 1;
+}
+
+.img:hover {
+  background-color: lightgray;
+  opacity: 0.3;
+}
+
+.rightSect {
+  width: 48%;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0 0.5rem;
+  background-color: transparent;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 450px;
+  gap: 1rem;
+  margin-top: 15px;
+  background-color: transparent;
+}
+
+label {
+  font-size: 1em;
+  font-weight: 700;
+  cursor: none;
+}
+
+input,
+textarea {
+  border: none;
+  border-bottom: 1px solid var(--border-color);
+  background-color: transparent;
+  font-size: 0.95rem;
+  padding: 8px 4px;
+  color: var(--text-color);
+  transition: border-color 0.3s ease;
+}
+
+button {
+  align-self: flex-start;
+  border: none;
+  background-color: var(--border-color);
+  color: var(--bg-color);
+  padding: 10px 24px;
+  font-size: 1em;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  cursor: none;
+  transition: opacity 0.4s ease, background-color 0.3s ease;
+  margin-top: 15px;
+}
+
+button:hover {
+  background-color: gray;
+}
+
+/* ------------------- Responsive ------------------- */
+@media (max-width: 1200px) {
+  .leftSect,
+  .rightSect {
+    width: 100%;
+    margin: 0;
+  }
+
+  .leftSect {
+    margin-top: 30px;
+  }
+
+  .rightSect {
+    align-items: center;
+  }
+
+  .form {
+    width: 90%;
+  }
+
+  .caption {
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 768px) {
+  .form {
+    width: 95%;
+    gap: 0.8rem;
+  }
+
+  button {
+    align-self: center;
+    padding: 10px 20px;
+  }
+
+  input,
+  textarea {
+    font-size: 0.9rem;
+  }
+
+  .caption {
+    font-size: 0.85em;
+  }
+}
+
+@media (max-width: 480px) {
+  label {
+    font-size: 0.9em;
+  }
+
+  input,
+  textarea {
+    font-size: 0.85rem;
+    padding: 6px 3px;
+  }
+
+  button {
+    font-size: 0.9em;
+    padding: 8px 16px;
+  }
+}
