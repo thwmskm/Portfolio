@@ -1,4 +1,4 @@
-import styles from "./info.module.css";
+import styles from "./Info.module.css";
 import { ArrowUpRight } from "lucide-react";
 
 function Info() {
