@@ -31,7 +31,7 @@ function Contact() {
       <div className={styles.container}>
         <div className={styles.leftSect}>
           <div className={styles.wrapper}>
-            <img src="/h2.jpg" alt="Home Image 1" className={styles.img}></img>
+            <img src="/h2.webp" alt="Home Image 1" className={styles.img}></img>
             <p className={styles.caption}>Old City Hall, Toronto, Canada</p>
           </div>
         </div>

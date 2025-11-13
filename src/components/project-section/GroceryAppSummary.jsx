@@ -18,7 +18,7 @@ function GroceryAppSummary({ onClose }) {
             <div className={`${styles.scBox}${styles.homeSc}`}>
               <img
                 className={styles.projSc}
-                src="/gl_home.jpg"
+                src="/gl_home.webp"
                 alt="Grocery Cart Page"
               ></img>
             </div>
@@ -37,7 +37,7 @@ function GroceryAppSummary({ onClose }) {
             <div className={`${styles.scBox}${styles.editSc}`}>
               <img
                 className={styles.projSc}
-                src="/gl_edit.jpg"
+                src="/gl_edit.webp"
                 alt="Grocery Item Edit Page"
               ></img>
             </div>
@@ -52,7 +52,7 @@ function GroceryAppSummary({ onClose }) {
             <div className={`${styles.scBox}${styles.addSc}`}>
               <img
                 className={styles.projSc}
-                src="/gl_add.jpg"
+                src="/gl_add.webp"
                 alt="Grocery Add Page"
               ></img>
             </div>
@@ -72,7 +72,7 @@ function GroceryAppSummary({ onClose }) {
             <div className={`${styles.scBox}${styles.voiceSc}`}>
               <img
                 className={styles.projSc}
-                src="/gl_found.jpg"
+                src="/gl_found.webp"
                 alt="Voice-to-Text Result Page"
               ></img>
             </div>

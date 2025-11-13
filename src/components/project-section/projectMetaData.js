@@ -24,7 +24,7 @@ export const projects = [
         site: "https://aws.amazon.com/",
       },
     ],
-    sc: "/evecom_sc.jpg",
+    sc: "/evecom_sc.webp",
     date: "2025",
   },
   {
@@ -42,7 +42,7 @@ export const projects = [
         site: "https://developer.android.com/studio",
       },
     ],
-    sc: "/groceryList_sc.png",
+    sc: "/groceryList_sc.webp",
     date: "2024",
   },
 ];

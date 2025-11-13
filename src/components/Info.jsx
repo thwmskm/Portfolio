@@ -62,7 +62,7 @@ function Info() {
 
         <div className={styles.middleSect}>
           <div className={styles.wrapper}>
-            <img src="/h1.jpg" alt="Home Image 2" className={styles.img}></img>
+            <img src="/h1.webp" alt="Home Image 2" className={styles.img}></img>
             <p className={styles.caption}>Lotte Tower, Seoul, South Korea</p>
           </div>
         </div>
