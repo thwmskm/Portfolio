@@ -112,6 +112,9 @@ strong {
   color: gray;
   transition: color 0.1s ease;
 }
+.warning {
+  font-weight: 1000;
+}
 .tech {
   grid-column: 1;
   grid-row: 2;
@@ -122,6 +125,7 @@ strong {
   font-size: smaller;
   font-weight: 700;
   margin-bottom: 30px;
+  margin-top: 20px;
   /* border-bottom: solid 1px lightgray; */
 }
 .techLinks {

@@ -48,7 +48,11 @@ function EvStore({ project, onBack, onNext, onPrev }) {
               features a secure admin dashboard for managing listings and
               inventory. Fully cloud-implemented using{" "}
               <strong>AWS's RDS</strong>, <strong>Vercel</strong>, and{" "}
-              <strong>Render</strong>.
+              <strong>Render</strong>.<br></br>
+              <strong className={styles.warning}>
+                **Please allow Render to load the site's data, as it may take a
+                few minutes**
+              </strong>
             </p>
             <a
               href="https://ecommerce-site-frontend-drab.vercel.app/"
