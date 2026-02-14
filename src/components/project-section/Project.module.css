@@ -6,7 +6,9 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  transition: background-color 0.4s ease, color 0.4s ease,
+  transition:
+    background-color 0.4s ease,
+    color 0.4s ease,
     border-color 0.4s ease;
 }
 .listContainer {
@@ -21,13 +23,19 @@
   display: flex;
   flex-direction: column;
   margin-right: 25px;
+  flex-shrink: 0;
+  flex-grow: 0;
 }
 .preview {
   margin-right: 50px;
   opacity: 0;
-  transition: opacity 0.3s ease, top 0.3s ease;
+  transition:
+    opacity 0.3s ease,
+    top 0.3s ease;
   position: relative;
   pointer-events: none;
+  flex-shrink: 0;
+  flex-grow: 0;
 }
 .preview.show {
   opacity: 1;
