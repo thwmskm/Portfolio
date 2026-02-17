@@ -49,7 +49,7 @@ function Info() {
           <section>
             <p className={styles.label}>Resume</p>
             <a
-              href="/HwanKimResumeFT.pdf"
+              href="/Hwan-Kim-Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.link}

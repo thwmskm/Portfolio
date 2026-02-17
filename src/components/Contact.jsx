@@ -12,7 +12,7 @@ function Contact() {
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
         import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         form.current,
-        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
       )
       .then(
         () => {
@@ -22,7 +22,7 @@ function Contact() {
         (error) => {
           console.log("FAILED...", error.text);
           alert("Something went wrong, please try again.");
-        }
+        },
       );
   };
 
@@ -44,7 +44,7 @@ function Contact() {
             <input type="email" name="email" required />
 
             <label>Message</label>
-            <textarea name="message" rows="10" required />
+            <textarea name="message" rows="8" required />
 
             <button type="submit" data-cursor="link">
               Send

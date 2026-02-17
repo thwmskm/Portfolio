@@ -1,5 +1,4 @@
 .container {
-  min-height: 100vh;
   width: 80%;
   display: flex;
   justify-content: space-evenly;
@@ -25,7 +24,7 @@
 
 /*------------------middle Sect----------*/
 .middleSect {
-  width: 370px;
+  width: 300px;
   height: 100%;
   margin: 0;
   overflow: hidden;

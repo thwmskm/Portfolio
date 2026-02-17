@@ -1,7 +1,9 @@
 .body {
   scrollbar-width: none;
   -ms-overflow-style: none;
-  transition: background-color 0.4s ease, color 0.4s ease,
+  transition:
+    background-color 0.4s ease,
+    color 0.4s ease,
     border-color 0.4s ease;
 }
 
@@ -22,7 +24,9 @@ body.dark {
   min-height: 100vh;
   background-color: var(--bg-color);
   color: var(--text-color);
-  transition: background-color 0.4s ease, color 0.4s ease,
+  transition:
+    background-color 0.4s ease,
+    color 0.4s ease,
     border-color 0.4s ease;
 }
 .menu-section {
@@ -76,7 +80,9 @@ body.dark {
   overflow: hidden;
   opacity: 0;
   max-width: 0;
-  transition: max-width 0.4s ease, opacity 0.4s ease;
+  transition:
+    max-width 0.4s ease,
+    opacity 0.4s ease;
   vertical-align: bottom;
 }
 .name-section:hover .name-half {
@@ -105,7 +111,9 @@ body.dark {
   border-radius: 50%;
   position: relative;
   margin-bottom: 14px;
-  transition: background-color 0.4s ease, color 0.4s ease,
+  transition:
+    background-color 0.4s ease,
+    color 0.4s ease,
     border-color 0.4s ease;
 }
 .box.light {
@@ -185,5 +193,12 @@ body.dark {
 @media (max-width: 768px) {
   .cursor {
     display: none !important;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .box.light {
+    background-color: #f5f5f5;
+    color: #111111;
   }
 }
