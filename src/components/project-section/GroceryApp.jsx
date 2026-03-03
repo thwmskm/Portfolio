@@ -33,9 +33,10 @@ function GroceryApp({ project, onBack, onNext, onPrev, onSummary }) {
           <aside className={styles.about}>
             <p>
               Built with <strong>Java</strong> in{" "}
-              <strong>Android Studio</strong>, this smart grocery app brings
-              accessibility to the forefront for users with visual impairments.
-              Through ease of use <strong>voice-to-text</strong> and{" "}
+              <strong>Android Studio</strong>, this smart grocery app was
+              developed as a user-centered research project focused on improving
+              accessibility for individuals with visual impairments. Through
+              ease of use <strong>voice-to-text</strong> and{" "}
               <strong>text-to-speech</strong> interactions, it transforms
               everyday shopping into a simple, easy, intuitive, yet effective
               experience. Designed for performance, usability, and user
