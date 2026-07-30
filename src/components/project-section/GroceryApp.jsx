@@ -35,13 +35,13 @@ function GroceryApp({ project, onBack, onNext, onPrev, onSummary }) {
               Built with <strong>Java</strong> in{" "}
               <strong>Android Studio</strong>, this smart grocery app was
               developed as a user-centered research project focused on improving
-              accessibility for individuals with visual impairments. Through
-              ease of use <strong>voice-to-text</strong> and{" "}
-              <strong>text-to-speech</strong> interactions, it transforms
-              everyday shopping into a simple, easy, intuitive, yet effective
-              experience. Designed for performance, usability, and user
-              satisfaction. Real-time UX research was conducted for
-              effectiveness and to ensure appropriate accomodations.
+              accessibility for individuals with visual impairments. Through{" "}
+              <strong>voice-to-text</strong> and <strong>text-to-speech</strong>{" "}
+              interactions, it transforms everyday shopping into a simple and
+              intuitive yet effective experience. Designed for performance,
+              usability, and user satisfaction. Real-time UX research was
+              conducted for effectiveness and to ensure appropriate
+              accomodations.
             </p>
             <a
               onClick={() => onSummary(2)}
@@ -49,6 +49,16 @@ function GroceryApp({ project, onBack, onNext, onPrev, onSummary }) {
               data-cursor="link"
             >
               View Details
+              <ArrowUpRight className={styles.linkArrow}></ArrowUpRight>
+            </a>
+            <a
+              href="/GroceryListApp_ResearchPaper.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.link}
+              data-cursor="link"
+            >
+              Research Paper
               <ArrowUpRight className={styles.linkArrow}></ArrowUpRight>
             </a>
             <a
