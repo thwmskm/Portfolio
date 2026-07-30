@@ -18,11 +18,6 @@ export const projects = [
         color: "#4479A1",
         site: "https://www.mysql.com/",
       },
-      {
-        tech: "AWS",
-        color: "#FF9900",
-        site: "https://aws.amazon.com/",
-      },
     ],
     sc: "/evecom_sc.webp",
     date: "2025",

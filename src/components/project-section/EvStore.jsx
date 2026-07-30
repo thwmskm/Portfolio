@@ -38,21 +38,15 @@ function EvStore({ project, onBack, onNext, onPrev }) {
           <aside className={styles.about}>
             <p>
               A <strong>Full-Stack</strong>, secure web application built with
-              <strong> React, Node.js, MySQL,</strong> and
-              <strong> AWS, </strong>
+              <strong> React, Node.js</strong>, and <strong>MySQL</strong>.
               powered by <strong>RESTful APIs</strong> for seamless data
               management. <br></br>
               <br></br>Effortlessly explore and filter electric vehicles, drive
               into detailed pages with specs and user reviews, and interact with
               a chatbot to steer through real-time assistance. The platform also
               features a secure admin dashboard for managing listings and
-              inventory. Fully cloud-implemented using{" "}
-              <strong>AWS's RDS</strong>, <strong>Vercel</strong>, and{" "}
-              <strong>Render</strong>.<br></br>
-              <strong className={styles.warning}>
-                **Please allow Render to load the site's data, as it may take a
-                few minutes**
-              </strong>
+              inventory. Fully cloud-implemented using <strong>Vercel</strong>{" "}
+              and <strong>Railway</strong>.<br></br>
             </p>
             <a
               href="https://ecommerce-site-frontend-drab.vercel.app/"
