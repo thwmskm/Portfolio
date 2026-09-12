@@ -6,6 +6,7 @@ import Projects from "./components/project-section/Project.jsx";
 import Contact from "./components/Contact.jsx";
 import EvStore from "./components/project-section/EvStore.jsx";
 import GroceryApp from "./components/project-section/GroceryApp.jsx";
+import YUYL from "./components/project-section/YUYL.jsx";
 import GroceryAppSummary from "./components/project-section/GroceryAppSummary.jsx";
 import { projects } from "./components/project-section/projectMetaData.js";
 import Info from "./components/Info.jsx";
@@ -76,7 +77,7 @@ function App() {
         if (!project) return null;
         if (project.id === 1) {
           return (
-            <EvStore
+            <YUYL
               project={project}
               onBack={() => handleContentSwap("Projects")}
               onNext={handleNext}
@@ -84,6 +85,15 @@ function App() {
             />
           );
         } else if (project.id === 2) {
+          return (
+            <EvStore
+              project={project}
+              onBack={() => handleContentSwap("Projects")}
+              onNext={handleNext}
+              onPrev={handlePrev}
+            />
+          );
+        } else if (project.id === 3) {
           return (
             <GroceryApp
               project={project}
@@ -114,7 +124,7 @@ function App() {
     window.scrollTo({ top: 0, behavior: "smooth" });
     setTimeout(() => {
       setActiveProjectId((prevId) =>
-        prevId >= projects.length ? 1 : prevId + 1
+        prevId >= projects.length ? 1 : prevId + 1,
       );
       setFade(false);
     }, 400);
@@ -126,7 +136,7 @@ function App() {
     window.scrollTo({ top: 0, behavior: "smooth" });
     setTimeout(() => {
       setActiveProjectId((prevId) =>
-        prevId <= 1 ? projects.length : prevId - 1
+        prevId <= 1 ? projects.length : prevId - 1,
       );
       setFade(false);
     }, 400);

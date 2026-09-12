@@ -1,6 +1,29 @@
 export const projects = [
   {
     id: 1,
+    title: "YU*YL (Wardrobe App)",
+    tags: [
+      {
+        tech: "React Native",
+        color: "#0081A3",
+        site: "https://reactnative.dev/",
+      },
+      {
+        tech: "Firebase",
+        color: "#FF9100",
+        site: "https://firebase.google.com/",
+      },
+      {
+        tech: "Expo",
+        color: "#4630EB",
+        site: "https://expo.dev",
+      },
+    ],
+    sc: "",
+    date: "2026",
+  },
+  {
+    id: 2,
     title: "Electric Vehicle Store",
     tags: [
       {
@@ -23,7 +46,7 @@ export const projects = [
     date: "2025",
   },
   {
-    id: 2,
+    id: 3,
     title: "Grocery List App",
     tags: [
       {
