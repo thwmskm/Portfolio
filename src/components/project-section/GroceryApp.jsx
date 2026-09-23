@@ -22,13 +22,16 @@ function GroceryApp({ project, onBack, onNext, onPrev, onSummary }) {
 
         <section className={styles.contentSection}>
           <div className={styles.scBox}>
-            <img
+            <video
               className={styles.projSc}
-              src={project.sc}
-              alt={project.title}
               data-cursor="enter"
-              onClick={() => onSummary(2)}
-            ></img>
+              autoPlay
+              playsInline
+              loop
+              muted
+            >
+              <source src="/gl_demo.mp4" type="video/mp4" />
+            </video>
           </div>
           <aside className={styles.about}>
             <p>

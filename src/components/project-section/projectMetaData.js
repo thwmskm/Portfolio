@@ -19,7 +19,7 @@ export const projects = [
         site: "https://expo.dev",
       },
     ],
-    sc: "",
+    sc: "/yuyl_sc.webp",
     date: "2026",
   },
   {

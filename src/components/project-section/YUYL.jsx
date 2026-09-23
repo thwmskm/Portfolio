@@ -27,12 +27,12 @@ function YUYL({ project, onBack, onNext, onPrev }) {
               target="_blank"
               rel="noopener noreferrer"
             >
-              {/*<img
+              <img
                 className={styles.projSc}
                 src={project.sc}
                 alt={project.title}
                 data-cursor="enter"
-              ></img>*/}
+              ></img>
             </a>
           </div>
           <aside className={styles.about}>
