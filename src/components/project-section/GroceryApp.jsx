@@ -24,6 +24,7 @@ function GroceryApp({ project, onBack, onNext, onPrev, onSummary }) {
           <div className={styles.scBox}>
             <video
               className={styles.projSc}
+              onClick={() => onSummary(2)}
               data-cursor="enter"
               autoPlay
               playsInline

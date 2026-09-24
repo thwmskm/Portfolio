@@ -68,8 +68,8 @@ function App() {
     switch (activeSection) {
       case "Projects":
         return <Projects handleProjectSwap={handleChildData}></Projects>;
-      case "Contact":
-        return <Contact></Contact>;
+      /*case "Contact":
+        return <Contact></Contact>;*/
       case "Info":
         return <Info></Info>;
       case "ProjectDetail": {
@@ -170,9 +170,9 @@ function App() {
               <span className="name-half">im</span>.
             </h2>
           </div>
-
           <br />
-          {["Projects", "Info", "Contact"].map((item) => (
+          {/*Main content list*/}
+          {["Projects", "Info"].map((item) => (
             <p
               key={item}
               onClick={() => {
@@ -186,7 +186,6 @@ function App() {
               {item}
             </p>
           ))}
-
           <div className="mode">
             <div
               className={`box light ${theme === "light" ? "active" : ""}`}

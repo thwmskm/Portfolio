@@ -122,7 +122,7 @@ function Project({ handleProjectSwap }) {
       <div className={styles.container}>
         <div className={styles.name}>
           <h1 className={styles.nameBold}>Hwan Kim</h1>
-          <p>Web/App Developer</p>
+          <p>Software Developer</p>
           <p>Toronto</p>
         </div>
         <div className={styles.listContainer}>
