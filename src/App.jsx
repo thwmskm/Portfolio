@@ -8,6 +8,7 @@ import EvStore from "./components/project-section/EvStore.jsx";
 import GroceryApp from "./components/project-section/GroceryApp.jsx";
 import YUYL from "./components/project-section/YUYL.jsx";
 import GroceryAppSummary from "./components/project-section/GroceryAppSummary.jsx";
+import YUYLSummary from "./components/project-section/YUYLSummary.jsx";
 import { projects } from "./components/project-section/projectMetaData.js";
 import Info from "./components/Info.jsx";
 import Cursor from "./components/Cursor.jsx";
@@ -16,7 +17,7 @@ import { Menu, X } from "lucide-react";
 
 function App() {
   const [splash, setSplash] = useState(true);
-  const [activeSection, setActiveSection] = useState("Projects"); // "Projects", "Info", "Contact", "Grocery App Summary"
+  const [activeSection, setActiveSection] = useState("Projects"); // "Projects", "Info", "Contact", "Grocery App Summary", "YUYLSummary"
   const [activeProjectId, setActiveProjectId] = useState(1); //For numeric project id
   const [fade, setFade] = useState(false);
   const [theme, setTheme] = useState("light");
@@ -48,6 +49,8 @@ function App() {
       handleContentSwap("ProjectDetail");
     } else if (message === "Grocery App Summary") {
       handleContentSwap("Grocery App Summary");
+    } else if (message === "YUYL Summary") {
+      handleContentSwap("YUYL Summary");
     }
   };
 
@@ -82,6 +85,7 @@ function App() {
               onBack={() => handleContentSwap("Projects")}
               onNext={handleNext}
               onPrev={handlePrev}
+              onSummary={() => handleChildData("YUYL Summary")}
             />
           );
         } else if (project.id === 2) {
@@ -112,6 +116,10 @@ function App() {
           <GroceryAppSummary
             onClose={() => handleContentSwap("ProjectDetail")}
           />
+        );
+      case "YUYL Summary":
+        return (
+          <YUYLSummary onClose={() => handleContentSwap("ProjectDetail")} />
         );
       default:
         return <Projects handleProjectSwap={handleChildData}></Projects>;

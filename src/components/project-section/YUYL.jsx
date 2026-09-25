@@ -3,7 +3,7 @@ import { ArrowLeft } from "lucide-react";
 import { ArrowUpRight } from "lucide-react";
 import { ArrowRight } from "lucide-react";
 
-function YUYL({ project, onBack, onNext, onPrev }) {
+function YUYL({ project, onBack, onNext, onPrev, onSummary }) {
   return (
     <>
       <div className={styles.container}>
@@ -22,18 +22,13 @@ function YUYL({ project, onBack, onNext, onPrev }) {
 
         <section className={styles.contentSection}>
           <div className={styles.scBox}>
-            <a
-              href="https://github.com/thwmskm/OOTD"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                className={styles.projSc}
-                src={project.sc}
-                alt={project.title}
-                data-cursor="enter"
-              ></img>
-            </a>
+            <img
+              className={styles.projSc}
+              src={project.sc}
+              alt={project.title}
+              data-cursor="enter"
+              onClick={() => onSummary(0)}
+            ></img>
           </div>
           <aside className={styles.about}>
             <p>
@@ -49,7 +44,7 @@ function YUYL({ project, onBack, onNext, onPrev }) {
               pipeline for deployment.
             </p>
             <a
-              onClick={() => onSummary(2)}
+              onClick={() => onSummary(0)}
               className={styles.link}
               data-cursor="link"
             >
