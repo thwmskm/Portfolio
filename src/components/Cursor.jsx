@@ -1,7 +1,14 @@
 import { useState, useEffect } from "react";
 import styles from "./Cursor.module.css";
 import { motion } from "framer-motion";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Play } from "lucide-react";
+
+const CURSOR_SIZES = {
+  enter: 48,
+  play: 48,
+  link: 12,
+  default: 9,
+};
 
 function Cursor() {
   const [pos, setPos] = useState({ x: 0, y: 0 });
@@ -9,31 +16,22 @@ function Cursor() {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    // Detect mobile viewport
     const checkMobile = () => setIsMobile(window.innerWidth <= 768);
     checkMobile();
     window.addEventListener("resize", checkMobile);
 
-    // Track mouse position
     const handleMouseMove = (e) => {
       setPos({ x: e.clientX, y: e.clientY });
     };
 
-    // Detect hover targets
     const handleMouseOver = (e) => {
       const target = e.target.closest("[data-cursor]");
-      if (target) {
-        setCursorType(target.dataset.cursor);
-      } else {
-        setCursorType("default");
-      }
+      setCursorType(target ? target.dataset.cursor : "default");
     };
 
-    // Add listeners
     window.addEventListener("mousemove", handleMouseMove);
     document.addEventListener("mouseover", handleMouseOver);
 
-    // Clean up
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
       document.removeEventListener("mouseover", handleMouseOver);
@@ -41,7 +39,7 @@ function Cursor() {
     };
   }, []);
 
-  if (isMobile) return null; // Do not render custom cursor on mobile
+  if (isMobile) return null;
 
   const cursorChanger = () => {
     switch (cursorType) {
@@ -49,10 +47,14 @@ function Cursor() {
         return `${styles.cursor} ${styles.linkType}`;
       case "enter":
         return `${styles.cursor} ${styles.enterType}`;
+      case "play":
+        return `${styles.cursor} ${styles.playType}`;
       default:
         return `${styles.cursor} ${styles.defaultType}`;
     }
   };
+
+  const size = CURSOR_SIZES[cursorType] ?? CURSOR_SIZES.default;
 
   return (
     <motion.div
@@ -63,14 +65,13 @@ function Cursor() {
         transform: "translate(-50%, -50%)",
       }}
       animate={{
-        width: cursorType === "enter" ? 48 : cursorType === "link" ? 12 : 9,
-        height: cursorType === "enter" ? 48 : cursorType === "link" ? 12 : 9,
+        width: size,
+        height: size,
         transition: { type: "spring", stiffness: 150, damping: 25 },
       }}
     >
-      {cursorType === "enter" && (
-        <ArrowUpRight className={styles.enterArrow}></ArrowUpRight>
-      )}
+      {cursorType === "enter" && <ArrowUpRight className={styles.enterArrow} />}
+      {cursorType === "play" && <Play className={styles.playIcon} />}
     </motion.div>
   );
 }

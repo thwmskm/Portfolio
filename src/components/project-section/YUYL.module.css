@@ -65,20 +65,20 @@ a:active {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto;
   border-bottom: solid 1px #ccc;
-  grid-template-columns: 30% 70%;
   align-items: center;
 }
 .scBox {
   grid-column: 1;
   grid-row: 1;
-  max-width: 300px;
+  max-width: 400px;
   height: auto;
   background-color: var(--bg-color);
 }
 .projSc {
-  width: 300px;
+  width: 100%;
   height: auto;
   object-fit: contain;
+  border-radius: 10%;
 }
 .about {
   grid-column: 2;
@@ -215,8 +215,8 @@ article:hover .arrow {
 
   .scBox {
     width: 100%;
-    max-width: 100%;
-    justify-content: center;
+    max-width: 200px;
+    margin: 0 auto;
   }
 
   .projSc {

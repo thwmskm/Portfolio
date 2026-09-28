@@ -17,19 +17,20 @@ function FeatureVideo({ src, caption }) {
   };
 
   return (
-    <section
-      className={styles.gridChild}
-      onMouseEnter={handleEnter}
-      onMouseLeave={handleLeave}
-    >
-      <div className={styles.scBox}>
+    <section className={styles.gridChild}>
+      <div
+        className={styles.scBox}
+        onMouseEnter={handleEnter}
+        onMouseLeave={handleLeave}
+      >
         <video
           ref={videoRef}
-          className={`${styles.projSc} ${styles.ootdCrop}`}
+          className={styles.projSc}
           playsInline
           loop
           muted
           preload="metadata"
+          data-cursor="play"
         >
           <source src={src} type="video/mp4" />
         </video>
@@ -41,10 +42,13 @@ function FeatureVideo({ src, caption }) {
 
 function YUYLSummary({ onClose }) {
   const features = [
-    { src: "/YUYL_ootdDemo.mp4", caption: "Uploading Outfit of the Day" },
-    { src: "/YUYL_clothingDemo.mp4", caption: "Creating new clothing item" },
-    { src: "/YUYL_outfitDemo.mp4", caption: "Creating new outfit combination" },
-    { src: "/YUYL_profileDemo.mp4", caption: "Profile tab" },
+    { src: "/yuyl_ootd.mp4", caption: "Uploading Outfit of the Day" },
+    { src: "/yuyl_clothing.mp4", caption: "Creating new clothing item" },
+    {
+      src: "/yuyl_outfit.mp4",
+      caption: "Creating new outfit combination",
+    },
+    { src: "/yuyl_profile.mp4", caption: "Profile tab" },
   ];
 
   return (

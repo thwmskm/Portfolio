@@ -1,4 +1,4 @@
-import styles from "./EvStore.module.css";
+import styles from "./YUYL.module.css";
 import { ArrowLeft } from "lucide-react";
 import { ArrowUpRight } from "lucide-react";
 import { ArrowRight } from "lucide-react";
