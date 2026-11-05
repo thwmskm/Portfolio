@@ -2,7 +2,9 @@
   width: 80%;
   height: 100%;
   padding-right: 40px;
-  transition: background-color 0.4s ease, color 0.4s ease,
+  transition:
+    background-color 0.4s ease,
+    color 0.4s ease,
     border-color 0.4s ease;
 }
 .titleSection {
@@ -112,6 +114,9 @@ strong {
   color: gray;
   transition: color 0.1s ease;
 }
+.link:hover .linkArrow {
+  transform: translate(2px, -2px);
+}
 .warning {
   font-weight: 1000;
 }
@@ -148,6 +153,9 @@ strong {
 .techName:hover {
   color: gray;
   transition: color 0.1s ease;
+}
+.techName:hover .linkArrow {
+  transform: translate(2px, -2px);
 }
 /*--------------------Navigation Section----------------*/
 .navSection {

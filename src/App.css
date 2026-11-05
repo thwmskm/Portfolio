@@ -33,6 +33,7 @@ body.dark {
   margin: 0 30px;
   width: fit-content;
   position: fixed;
+  height: 100%;
 }
 .main-section {
   width: 100%;
@@ -100,6 +101,9 @@ body.dark {
   display: flex;
   flex-direction: column;
   margin-top: 20px;
+  position: absolute;
+  bottom: 30px;
+  left: 0;
 }
 .box {
   width: 1em;
@@ -172,7 +176,8 @@ body.dark {
   .mode {
     flex-direction: row;
     gap: 12px;
-    margin-top: 20px;
+    bottom: 30px;
+    left: 20px;
   }
 
   .main-section {
