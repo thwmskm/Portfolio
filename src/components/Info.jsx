@@ -14,15 +14,39 @@ function Info() {
     }
   };
 
-  const frontend = ["JavaScript", "React", "React Native", "HTML", "CSS"];
-  const backend = ["Node.js", "Express", "MySQL", "REST APIs"];
+  const languages = ["JavaScript", "TypeScript", "Java"];
+  const frontend = ["React", "React Native", "HTML", "CSS"];
+  const backend = ["Node.js", "Express", "MySQL", "Sequelize", "FireStore"];
+  const cloud = ["Firebase", "Vercel", "Railway", "AWS"];
   const tools = ["Git", "Figma", "Playwright"];
 
   return (
     <div className={styles.container}>
       <div className={styles.profileSection}>
+        <section className={styles.introSection}>
+          <p className={styles.label}>About</p>
+          <p className={styles.intro}>
+            Hi, I’m Hwan, a Software Engineer in Toronto. I build web and mobile
+            apps using <strong>React</strong>, <strong>Node.js</strong>, and
+            <strong> MySQL</strong>, and I like building scalable solutions to
+            real problems with a clean UX/UI. Currently open to
+            <strong> Software Developer/Analyst</strong> roles. Open to remote
+            roles as well.
+          </p>
+        </section>
         <section className={styles.techSection}>
           <p className={styles.label}>Tech Stack</p>
+
+          <div className={styles.techGroup}>
+            <p className={styles.techCategory}>Languages</p>
+            <div className={styles.techList}>
+              {languages.map((tech) => (
+                <span key={tech} className={styles.techItem}>
+                  {tech}
+                </span>
+              ))}
+            </div>
+          </div>
 
           <div className={styles.techGroup}>
             <p className={styles.techCategory}>Frontend</p>
@@ -39,6 +63,17 @@ function Info() {
             <p className={styles.techCategory}>Backend</p>
             <div className={styles.techList}>
               {backend.map((tech) => (
+                <span key={tech} className={styles.techItem}>
+                  {tech}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          <div className={styles.techGroup}>
+            <p className={styles.techCategory}>Cloud</p>
+            <div className={styles.techList}>
+              {cloud.map((tech) => (
                 <span key={tech} className={styles.techItem}>
                   {tech}
                 </span>

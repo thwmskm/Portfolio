@@ -27,6 +27,12 @@
   color: var(--text-color);
 }
 
+/*--------------- ABOUT ---------------------*/
+
+.introSection {
+  margin-bottom: 30px;
+}
+
 /*--------------- TECHNICAL TOOLKIT ---------------*/
 
 .techSection {
